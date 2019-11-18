@@ -1,0 +1,156 @@
+.catalogue{
+    padding-bottom: 103px;
+    &_tabs{
+        margin-top: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        &_tab{
+            margin: 0 5px;
+            width: 220px;
+            height: 50px;
+            transform: skew(-25deg);
+            color: #6b6b6b;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: 2px solid #d0d0d0;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer;
+            transition: 0.5s all;
+            &:hover{
+                box-shadow: 3px 3px 20px grey;
+                border: none;
+            }
+            div{
+                transform: skew(25deg);
+            }
+        }
+    }
+    &_items{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &_item{
+            margin: 10px 11px;
+            text-align: center;
+            padding: 20px 19px 27px;
+            width: 300px;
+            min-height: 440px;
+            border: 2px solid #e8e8e8;
+            background-color: #ffffff;
+            overflow: hidden;
+            &_header{
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            &_descr{
+                margin: 16px 0 18px;
+                font-size: 14px;
+                font-weight: 300;
+            }
+            a{  
+                color: $main-color;
+                font-size: 14px;
+                font-weight: 700;
+                text-decoration: underline;
+                text-transform: uppercase;
+                transition: 0.5s all;
+                cursor: pointer;
+                &:hover{
+                    color: red;
+                }
+            }
+            hr{
+                margin-top: 19px;
+                border-bottom: none;
+            }
+            &_footer{
+                margin-top: 21px;
+                display: flex;
+                &_prices{
+                    flex-direction: column;
+                    &_old{
+                        color: #555555;
+                        font-size: 14px;
+                        font-weight: 300;
+                        text-decoration: line-through;
+                        text-align: left;
+                    }
+                    &_new{
+                        font-size: 19px;
+                        font-weight: 700;
+                        text-align-last: left;
+                    }
+                }
+                button{
+                    margin-left: 32px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    width: 131px;
+                    height: 40px;
+                }
+            }
+            &_wrapper{
+                display: flex;
+                width: calc(200%);
+            }
+            &_main{
+                width: 50%;
+                transform: translateX(-100%);
+                transition: 0.5s all;
+            }
+            &_list{
+                position: relative;
+                width: 50%;
+                transition: 0.5s all;
+                li{
+                    list-style: none;
+                    padding-right: 20px;
+                    position: relative;
+                    text-align: left;
+                    color: #555555;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-bottom: 5px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $main-color;
+                        left: - 10px;
+                        top: 7px;
+                    }
+                }
+                a{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    .items_show{
+        display: flex;
+    }
+    .items_hide{
+        display: none;
+    }
+    .tab_active{
+        background-color: $main-color;
+        border: none;
+        color: #ffffff;
+    }
+    .main_active{
+        transform: translateX(0%);
+    }
+    .list_active{
+        transform: translateX(-100%);
+    }
+}

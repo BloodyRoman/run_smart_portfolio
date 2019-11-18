@@ -1,0 +1,27 @@
+@import 'base/variables';
+@import '_media';
+
+
+*{
+    font-family: 'Museo Sans Cyrl', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/_titles';
+@import 'blocks/_forms';
+@import 'blocks/_buttons';
+@import 'blocks/_header';
+@import 'blocks/_promo';
+@import 'blocks/_advantages';
+@import 'blocks/_consultation';
+@import 'blocks/_slider';
+@import 'blocks/_catalogue';
+@import 'blocks/_review';
+@import 'blocks/_contacts';
+@import 'blocks/modal';

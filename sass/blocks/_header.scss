@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    &_logo{
+        width: 251px;
+        height: 45px;
+        img{
+            width: 100%;
+        }
+    }
+    &_official{
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 500;
+        &_brands{
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &_contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        a {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.5s all;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        button {
+            margin-top: 8px;
+        }
+    }
+}
